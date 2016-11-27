@@ -79,7 +79,7 @@
     </dependency>
     <dependency>
       <groupId>com.typesafe.scala-logging</groupId>
-      <artifactId>scala-logging_${scalaVersion}</artifactId>
+      <artifactId>scala-logging_2.12</artifactId>
       <version>[3.4.0,4)</version>
     </dependency>
     <dependency>
@@ -115,7 +115,7 @@
     </dependency>
     <dependency>
       <groupId>org.scalatest</groupId>
-      <artifactId>scalatest_${scalaVersion}</artifactId>
+      <artifactId>scalatest_2.12</artifactId>
       <version>3.0.1</version>
       <scope>test</scope>
     </dependency>
