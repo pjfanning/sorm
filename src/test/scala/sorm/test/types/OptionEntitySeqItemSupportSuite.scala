@@ -24,14 +24,14 @@ class OptionEntitySeqItemSupportSuite extends FunSuite with Matchers with MultiI
     val a4 = db.save(A( Seq(None) ))
 
     test(dbId + " - empty seq"){
-      db.fetchById[A](a1.id).seq should be === Seq()
+      db.fetchById[A](a1.id).seq shouldEqual Seq()
     }
     test(dbId + " - seq of none"){
-      db.fetchById[A](a4.id).seq should be === Seq(None)
+      db.fetchById[A](a4.id).seq shouldEqual Seq(None)
     }
     test(dbId + " - not empty seqs are correct"){
-      db.fetchById[A](a2.id).seq should be === Seq(Some(b1), None, Some(b2))
-      db.fetchById[A](a3.id).seq should be === Seq(None, Some(b2))
+      db.fetchById[A](a2.id).seq shouldEqual Seq(Some(b1), None, Some(b2))
+      db.fetchById[A](a3.id).seq shouldEqual Seq(None, Some(b2))
     }
   }
 }

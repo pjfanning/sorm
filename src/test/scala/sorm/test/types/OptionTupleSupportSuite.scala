@@ -20,13 +20,13 @@ class OptionTupleSupportSuite extends FunSuite with Matchers with MultiInstanceS
     val a3 = db.save(A( Some(56 -> Some("asdf")) ))
 
     test(dbId + " - top none"){
-      db.fetchById[A](a1.id).a should be === None
+      db.fetchById[A](a1.id).a shouldEqual None
     }
     test(dbId + " - deep none"){
-      db.fetchById[A](a2.id).a should be === Some(2 -> None)
+      db.fetchById[A](a2.id).a shouldEqual Some(2 -> None)
     }
     test(dbId + " - deep some"){
-      db.fetchById[A](a3.id).a should be === Some(56 -> Some("asdf"))
+      db.fetchById[A](a3.id).a shouldEqual Some(56 -> Some("asdf"))
     }
   }
 

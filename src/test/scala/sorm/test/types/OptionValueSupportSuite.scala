@@ -20,15 +20,15 @@ class OptionValueSupportSuite extends FunSuite with Matchers with MultiInstanceS
     val a3 = db.save(A(Some(7)))
 
     test(dbId + " - saved entities are correct"){
-      db.fetchById[A](a1.id).a should be === None
-      db.fetchById[A](a2.id).a should be === Some(3)
-      db.fetchById[A](a3.id).a should be === Some(7)
+      db.fetchById[A](a1.id).a shouldEqual None
+      db.fetchById[A](a2.id).a shouldEqual Some(3)
+      db.fetchById[A](a3.id).a shouldEqual Some(7)
     }
     test(dbId + " - equals filter"){
       db.query[A]
-        .whereEqual("a", None).fetchOne().get should be === a1
+        .whereEqual("a", None).fetchOne().get shouldEqual a1
       db.query[A]
-        .whereEqual("a", Some(3)).fetchOne().get should be === a2
+        .whereEqual("a", Some(3)).fetchOne().get shouldEqual a2
     }
     test(dbId + " - not equals filter"){
       db.query[A]
