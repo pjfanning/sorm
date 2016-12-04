@@ -1,7 +1,6 @@
 package sorm.test.general
 
-import org.scalatest.FunSuite
-import org.scalatest.matchers.ShouldMatchers
+import org.scalatest.{FunSuite, Matchers}
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
@@ -23,7 +22,7 @@ object ArtistDbSuite {
 
 }
 @RunWith(classOf[JUnitRunner])
-class ArtistDbSuite extends FunSuite with ShouldMatchers with MultiInstanceSuite {
+class ArtistDbSuite extends FunSuite with Matchers with MultiInstanceSuite {
 
   import ArtistDbSuite._
 

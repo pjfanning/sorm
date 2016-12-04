@@ -1,6 +1,6 @@
 package sorm.core
 
-import org.scalatest._
+import org.scalatest.{FunSuite, Matchers}
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
