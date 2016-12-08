@@ -1,9 +1,17 @@
 language: scala
+jdk:
+  - oraclejdk7
+  - oraclejdk8
 scala:
   - 2.10.4
-  - 2.11.5
+  - 2.11.8
+  - 2.12.1
+matrix:
+  exclude:
+    - scala: 2.12.1
+      jdk: oraclejdk7  
 before_script:
   - psql -c 'create database test;' -U postgres
   - mysql -e 'create database sorm_test;'
 install: 
-  mvn install -DskipTests=true -Dgpg.skip=true
+  mvn test -Dgpg.skip=true

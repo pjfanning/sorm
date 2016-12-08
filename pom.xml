@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.sorm-framework</groupId>
-  <artifactId>sorm</artifactId>
+  <artifactId>sorm-release-test</artifactId>
   <version>0.3.22-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -47,40 +47,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.mchange</groupId>
-      <artifactId>c3p0</artifactId>
-      <version>0.9.2-pre5</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.nikita-volkov</groupId>
-      <artifactId>embrace</artifactId>
-      <version>[0.1.5,0.2)</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.nikita-volkov</groupId>
-      <artifactId>sext</artifactId>
-      <version>[0.2.4,0.3)</version>
-    </dependency>
-    <dependency>
-      <groupId>joda-time</groupId>
-      <artifactId>joda-time</artifactId>
-      <version>2.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.joda</groupId>
-      <artifactId>joda-convert</artifactId>
-      <version>1.2</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>13.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.typesafe.scala-logging</groupId>
-      <artifactId>scala-logging_2.11</artifactId>
-      <version>[3.4.0,4)</version>
+      <groupId>org.sorm-framework</groupId>
+      <artifactId>sorm</artifactId>
+      <version>0.3.21</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -88,7 +57,6 @@
       <version>1.7.2</version>
       <scope>test</scope>
     </dependency>
-
     <dependency>
       <groupId>postgresql</groupId>
       <artifactId>postgresql</artifactId>
