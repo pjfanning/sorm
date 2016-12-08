@@ -10,7 +10,7 @@ matrix:
   exclude:
     - scala: 2.12.1
       jdk: oraclejdk7  
-before_script:
+before_install:
   - psql -c 'create database test;' -U postgres
   - mysql -e 'create database sorm_test;'
 install: 
