@@ -5,8 +5,14 @@ name := "sorm"
 scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
-  "org.sorm-framework" % "sorm" % "0.3.21",
+  "org.sorm-framework" % "sorm" % "0.3.21" excludeAll(
+    ExclusionRule(organization = "org.scala-lang"),
+    ExclusionRule(organization = "com.typesafe.scala-logging")
+  ),
+  "org.scala-lang" % "scala-reflect" % scalaVersion.value,
+  "org.scala-lang" % "scala-compiler" % scalaVersion.value,
   "com.github.nikita-volkov" % "sext" % "0.2.5" force(),
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0",
   "org.slf4j" % "slf4j-simple" % "1.7.2" % "test",
   "postgresql" % "postgresql" % "9.1-901.jdbc4" % "test",
   "org.hsqldb" % "hsqldb" % "2.2.8" % "test",
